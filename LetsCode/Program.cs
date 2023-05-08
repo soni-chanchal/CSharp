@@ -15,6 +15,16 @@
         string str = Console.ReadLine();
         string result = ReverseString(str);
         Console.WriteLine($"Reverse string for {str} is {result}.");
+
+        // Reverse Array
+        int[] array = { 2, 5, 6, 8, 12, 5, 4, 3, 2, 1, };
+        ReverseArray(array);
+
+        //
+        int[] array2 = ReturnRevereArray(array);
+        TraverseArray(array2);
+
+
     }
 
     public static int Factorial(int num)
@@ -36,4 +46,35 @@
         }
         return reverseStr;
     }
+
+    public static void ReverseArray(int[] arr)
+    {
+        for(int index =  arr.Length-1;index >= 0; index--)
+        {
+            Console.WriteLine(arr[index]);
+        }
+    }
+
+    public static int[] ReturnRevereArray(int[] arr)
+    {
+        int[] temp = new int[arr.Length];
+        int i = 0;
+        
+        for( int index = arr.Length-1; --index >= 0;)
+        {
+            temp[9] = arr[9];
+            i++;
+        }
+        return temp;
+    }
+
+    public static void TraverseArray(int[] arr)
+    {
+        for(int index = 0; index < arr.Length; index++)
+        {
+            Console.Write($"{ arr[index]}  -> ");
+        }
+    }
 }
+
+
