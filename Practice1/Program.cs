@@ -18,6 +18,12 @@
         //find element in array
         int res = FindElement(array, 22);
         Console.WriteLine(res);
+
+        //factorial
+        Factorial(5);
+
+        //fibonacci
+        Fibonacci(10);
     }
 
     public static string StringReverse(string str)
@@ -90,5 +96,45 @@
 
         }
         return temp;
+    }
+
+    public static void Factorial(int num)
+    {
+        int fact = 1;
+        for(int i = 1 ; i<=num; i++)
+        {
+            fact = fact * i;
+        }
+        Console.WriteLine(fact);
+    }
+
+    public static void Fibonacci(int num)
+    {
+        int a = 0;
+        int b = 1;
+        if (num <= 0)
+        {
+            Console.WriteLine("Enter a valid number");
+        }
+        else if(num == 1)
+        {
+            Console.WriteLine(a);
+        }
+        else if( num == 2)
+        {
+            Console.WriteLine($"{a}{b}");
+        }
+        else
+        {
+            Console.WriteLine(a);
+            for(int i =2; i <= num; i++)
+            {
+                b = b + a;
+                Console.WriteLine(b);
+                int temp = a;
+                a = b;
+                b = temp;
+            }
+        }
     }
 }
